@@ -1,4 +1,4 @@
-html
+html(data-theme="dark")
     head
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -47,7 +47,12 @@ html
                     a(href="#").header-link
                         i.fas.fa-calendar-alt 
                         span Kalender
+
                     .user-info 
+                        .dm-toggle
+                            input(type="checkbox" checked)#switch
+                            label(for="switch").switch-label
+                                .toggle
                         span.username j.haas
                         span 
                             i.far.fa-user
@@ -497,6 +502,6 @@ html
                                         td 
                                             p 27.09.2019
                                             p 17:20:50
-
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
         script(src="https://kit.fontawesome.com/edcdc7b18e.js" crossorigin="anonymous")
         script(src="./app.dev.js" async defer)
