@@ -1,5 +1,5 @@
 
-<html>
+<html data-theme="dark">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -22,7 +22,14 @@
       <div class="main-container">
         <div class="header">
           <div class="logo"><a href="#"> <span>emantix</span><span> <i class="fas fa-cube"></i></span></a></div><a class="header-link" href="#"> <i class="fas fa-shield-alt"></i><span>Passwort-Manager</span></a><a class="header-link" href="#"> <i class="fas fa-inbox"></i><span>Systemnachrichten</span></a><a class="header-link active" href="#"><i class="fas fa-microchip"></i><span>System</span></a><a class="header-link" href="#"><i class="fas fa-calendar-alt"> </i><span>Kalender</span></a>
-          <div class="user-info"> <span class="username">j.haas</span><span> <i class="far fa-user"></i></span></div>
+          <div class="user-info"> 
+            <div class="dm-toggle">
+              <input type="checkbox" checked="checked" id="switch"/>
+              <label class="switch-label" for="switch">
+                <div class="toggle"></div>
+              </label>
+            </div><span class="username">j.haas</span><span> <i class="far fa-user"></i></span>
+          </div>
         </div>
         <div class="content">
           <div class="cards-wrapper" style="--delay: 1s">
@@ -438,6 +445,7 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/edcdc7b18e.js" crossorigin="anonymous"></script>
     <script src="./app.dev.js" async="async" defer="defer"></script>
   </body>

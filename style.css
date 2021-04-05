@@ -18,9 +18,59 @@ html {
 html body {
   height: 100vh;
   width: 100%;
-  background: #252954;
   font-family: "Inter", sans-serif;
+  color: #1d1d20;
+}
+
+html[data-theme=dark] body {
   color: #D7E0FF;
+}
+html[data-theme=dark] .app {
+  background-color: #0e0e23;
+}
+html[data-theme=dark] .app .side-link a {
+  color: #9b9ca7;
+}
+html[data-theme=dark] .app .header {
+  background: #141834;
+  background: radial-gradient(circle, #141834 0%, #13162f 100%);
+  box-shadow: 0 16px 12px #0e0e23;
+}
+html[data-theme=dark] .app .header::before {
+  background-color: #0e0e23;
+}
+html[data-theme=dark] .app .logo a {
+  color: #e7e8ea;
+}
+html[data-theme=dark] .app .header-link {
+  color: #9b9ca7;
+}
+html[data-theme=dark] .app .header-link:hover, html[data-theme=dark] .app .header-link.active {
+  background: #11132c;
+}
+html[data-theme=dark] .app .dm-toggle .switch-label {
+  border: 1px solid #D7E0FF;
+}
+html[data-theme=dark] .app .dm-toggle .switch-label .toggle {
+  background-color: #D7E0FF;
+}
+html[data-theme=dark] .app .dm-toggle #switch:checked ~ .switch-label {
+  background: #0e0e23;
+  border-color: #D7E0FF;
+}
+html[data-theme=dark] .app .cards-header {
+  background: #10122b;
+}
+html[data-theme=dark] .app .card {
+  background: #1a2049;
+  background: radial-gradient(circle, #1a2049 0%, #13162f 100%);
+}
+html[data-theme=dark] .app table thead {
+  background: #1a2049;
+  background: radial-gradient(circle, #1a2049 0%, #13162f 100%);
+}
+html[data-theme=dark] .app table th input {
+  border: 1px solid #D7E0FF;
 }
 
 .hidden {
@@ -34,12 +84,11 @@ img {
 .app {
   display: flex;
   height: 100vh;
-  background-color: #0e0e23;
+  background-color: #ececec;
   margin-right: auto;
   margin-left: auto;
 }
-
-.left-side {
+.app .left-side {
   width: 6rem;
   display: flex;
   flex-direction: column;
@@ -49,25 +98,23 @@ img {
   -webkit-animation: left 1s both;
   animation: left 1s both;
 }
-
-.side-link {
+.app .side-link {
   margin-bottom: 34px;
 }
-.side-link a {
-  color: #9b9ca7;
+.app .side-link a {
+  color: #424242;
 }
-.side-link a:hover, .side-link a.active {
-  color: #4255d4;
+.app .side-link a:hover, .app .side-link a.active {
+  color: #4255d4 !important;
 }
-.side-link i {
+.app .side-link i {
   font-size: 30px;
 }
-.side-link:last-child {
+.app .side-link:last-child {
   margin-top: auto;
   margin-bottom: 0;
 }
-
-.main-container {
+.app .main-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -76,11 +123,10 @@ img {
   overflow: auto;
   padding-left: 0;
 }
-
-.header {
-  background: #141834;
-  background: radial-gradient(circle, #141834 0%, #13162f 100%);
-  box-shadow: 0 16px 12px #0e0e23;
+.app .header {
+  background: #ffffff;
+  background: radial-gradient(circle, #ffffff 0%, #ffffff 100%);
+  box-shadow: 0 16px 12px #ececec;
   width: 100%;
   padding: 0 30px;
   -webkit-animation: top 1s both;
@@ -95,27 +141,27 @@ img {
   left: 0;
   z-index: 10;
 }
-.header::before {
+.app .header::before {
   content: "";
   width: 100%;
   height: 25px;
   position: absolute;
   top: -25px;
   left: 0;
-  background-color: #0e0e23;
+  background-color: #ececec;
 }
-
-.logo {
+.app .logo {
   padding: 20px 50px 20px 0;
 }
-.logo a {
+.app .logo a {
   font-size: 22px;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 700;
-  color: #e7e8ea;
+  color: #161616;
   text-decoration: none;
 }
-.logo i {
+.app .logo i {
+  color: #fff;
   background: #4255d4;
   padding: 8px;
   min-width: 15px;
@@ -123,9 +169,8 @@ img {
   border-radius: 50%;
   font-size: 15px;
 }
-
-.header-link {
-  color: #9b9ca7;
+.app .header-link {
+  color: #424242;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -135,61 +180,100 @@ img {
   transition: 0.3s;
   height: 100%;
 }
-.header-link:hover, .header-link.active {
-  background: #11132c;
+.app .header-link:hover, .app .header-link.active {
+  background: #f9f9f9;
   border-bottom: 3px solid #4255d4;
 }
-.header-link i {
+.app .header-link i {
   font-size: 20px;
   padding-right: 12px;
 }
-
-.user-info {
+.app .dm-toggle {
+  padding-right: 20px;
+}
+.app .dm-toggle #switch {
+  visibility: hidden;
+  position: absolute;
+}
+.app .dm-toggle .switch-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 22px;
+  border: 1px solid #1d1d20;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  margin-bottom: -4px;
+}
+.app .dm-toggle .switch-label .toggle {
+  width: 14px;
+  height: 14px;
+  border-radius: 25px;
+  background-color: #1d1d20;
+  position: absolute;
+  left: 3px;
+  transition: 0.5s all ease;
+}
+.app .dm-toggle #switch:checked ~ .switch-label {
+  transition: 0.5s all ease;
+  background: #ececec;
+  border-color: #1d1d20;
+}
+.app .dm-toggle #switch:checked ~ .switch-label .toggle {
+  height: 12.5px;
+  transform: scale(0.9) translateX(15px) rotate(90deg);
+  transition: 0.7s all ease;
+  border-radius: 25px 25px 0 0;
+  background: transparent;
+  box-shadow: 0px -6px 0 0 #fff;
+}
+.app .user-info {
   margin-left: auto;
   display: flex;
   align-items: center;
 }
-.user-info span.username {
+.app .user-info span.username {
   padding-right: 6px;
 }
-.user-info i {
+.app .user-info i {
   padding: 8px;
   margin-left: -2px;
   border-radius: 50%;
   font-size: 20px;
 }
-
-.content {
+.app .content {
   margin-top: 25px;
   -webkit-animation: top 1s both;
   animation: top 1s both 0.5s;
 }
-
-.cards-wrapper {
+.app .cards-wrapper {
   margin-left: 0;
   flex-grow: 1;
   max-width: none;
 }
-
-.cards-header {
+.app .cards-header {
   padding: 20px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #10122b;
+  background: #525252;
+  color: #fff;
   border-radius: 6px 6px 0 0;
   padding: 20px 45px;
   font-size: 15px;
   font-weight: 500;
 }
-.cards-header div i {
+.app .cards-header div i {
   font-size: 20px;
   padding-right: 8px;
 }
-.cards-header div i:last-child {
+.app .cards-header div i:last-child {
   padding-right: 0;
 }
-.cards-header .left a {
+.app .cards-header .left a {
   display: inline-flex;
   align-items: center;
   color: #fff;
@@ -202,13 +286,14 @@ img {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.cards-header .left a:hover {
+.app .cards-header .left a:hover {
+  color: #fff;
   box-shadow: 0 0 10px #d14b69;
 }
-.cards-header .middle {
+.app .cards-header .middle {
   margin-left: -150px;
 }
-.cards-header .middle span:last-child {
+.app .cards-header .middle span:last-child {
   cursor: pointer;
   display: inline-block;
   background: #4255d4;
@@ -216,22 +301,21 @@ img {
   margin-left: 6px;
   border-radius: 50%;
   font-size: 12px;
+  color: #fff;
 }
-.cards-header .right i {
+.app .cards-header .right i {
   cursor: pointer;
 }
-.cards-header .right i:hover {
+.app .cards-header .right i:hover {
   color: #1aa385;
 }
-
-.cards.card {
+.app .cards.card {
   border-radius: 0 0 6px 6px;
   padding: 0 20px 30px 20px;
 }
-
-.card {
-  background: #1a2049;
-  background: radial-gradient(circle, #1a2049 0%, #13162f 100%);
+.app .card {
+  background: #ffffff;
+  background: radial-gradient(circle, #ffffff 0%, #ffffff 100%);
   padding: 40px 30px;
   border-radius: 6px;
   display: flex;
@@ -239,40 +323,39 @@ img {
   flex-grow: 1;
   width: 100%;
 }
-
-table {
+.app table {
   text-align: left;
   padding: 0;
 }
-table thead {
+.app table thead {
   position: sticky;
   top: 85px;
-  background: #1a2049;
-  background: radial-gradient(circle, #1a2049 0%, #13162f 100%);
+  background: #ffffff;
+  background: radial-gradient(circle, #ffffff 0%, #ffffff 100%);
 }
-table th {
+.app table th {
   padding-top: 30px;
   font-size: 14px;
   font-weight: normal;
   padding-bottom: 16px;
 }
-table th:first-child {
+.app table th:first-child {
   padding-left: 36px;
 }
-table th span {
+.app table th span {
   display: inline-block;
   margin-bottom: 0.5em;
 }
-table th span.sorting {
+.app table th span.sorting {
   position: relative;
 }
-table th span.sorting a:hover i::before, table th span.sorting a.active i::before {
+.app table th span.sorting a:hover i::before, .app table th span.sorting a.active i::before {
   color: #1aa385 !important;
 }
-table th span.sorting a:hover + a, table th span.sorting a.active + a {
+.app table th span.sorting a:hover + a, .app table th span.sorting a.active + a {
   display: none;
 }
-table th span.sorting i {
+.app table th span.sorting i {
   position: absolute;
   left: 6px;
   height: 14px;
@@ -280,39 +363,39 @@ table th span.sorting i {
   color: #4255d4;
   transition: all 0.3s ease;
 }
-table th span.sorting i.up {
+.app table th span.sorting i.up {
   top: -8px;
 }
-table th span.sorting i.down {
+.app table th span.sorting i.down {
   top: -2px;
 }
-table th input {
+.app table th input {
   display: block;
-  border: 0;
+  border: 1px solid #1d1d20;
   border-radius: 6px;
   padding: 6px;
   max-width: 120px;
 }
-table tbody tr:nth-child(odd) {
+.app table tbody tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.1);
 }
-table tbody tr td {
+.app table tbody tr td {
   padding: 3px 0;
 }
-table tbody tr td:first-child {
+.app table tbody tr td:first-child {
   padding-left: 11px;
 }
-table tbody tr td:first-child input {
+.app table tbody tr td:first-child input {
   cursor: pointer;
 }
-table tbody tr td:first-child span {
+.app table tbody tr td:first-child span {
   display: inline-block;
   padding-left: 11px;
 }
-table tbody tr td:last-child p {
+.app table tbody tr td:last-child p {
   font-size: 14px;
 }
-table tbody tr td .parameter {
+.app table tbody tr td .parameter {
   height: 24px;
   padding: 4px 8px;
   border-radius: 4px;
