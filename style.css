@@ -266,6 +266,12 @@ table th span {
 table th span.sorting {
   position: relative;
 }
+table th span.sorting a:hover i::before, table th span.sorting a.active i::before {
+  color: #1aa385 !important;
+}
+table th span.sorting a:hover + a, table th span.sorting a.active + a {
+  display: none;
+}
 table th span.sorting i {
   position: absolute;
   left: 6px;
@@ -273,9 +279,6 @@ table th span.sorting i {
   width: 14px;
   color: #4255d4;
   transition: all 0.3s ease;
-}
-table th span.sorting i:hover {
-  color: #1aa385;
 }
 table th span.sorting i.up {
   top: -8px;
