@@ -309,6 +309,18 @@ table {
             margin-bottom: .5em;
             &.sorting {
                 position: relative;
+                a {
+                    &:hover,
+                    &.active {
+                        i::before {
+                            color: $green !important;
+                     
+                        }               
+                        &+ a {
+                            display: none;
+                        }     
+                    }
+                }
                 i {
                     position: absolute;
                     left: 6px;
@@ -316,9 +328,6 @@ table {
                     width: 14px;
                     color: $highlight;
                     transition: all .3s ease;
-                    &:hover {
-                        color: $green;
-                    }
                     &.up {
                         top: -8px;
                     }
