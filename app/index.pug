@@ -1,0 +1,502 @@
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        title
+        meta(name="description" content="")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png")
+        link(rel="stylesheet" href="./style.css")
+    body
+        .app
+            .left-side
+                .side-link
+                    a(href="#").active
+                        i.fa.fa-chart-pie
+                .side-link
+                    a(href="#")
+                        i.fa.fa-cubes
+                .side-link
+                    a(href="#")
+                        i.fa.fa-chart-area
+                .side-link
+                    a(href="#")
+                        i.fa.fa-spider
+                .side-link
+                    a(href="#")
+                        i.fa.fa-cog
+                .side-link
+                    a(href="#")
+                        i.fa.fa-sign-out-alt
+            .main-container
+                .header
+                    .logo
+                        a(href="#") 
+                            span emantix
+                            span 
+                                i.fas.fa-cube
+                    a(href="#").header-link 
+                        i.fas.fa-shield-alt
+                        span Passwort-Manager
+                    a(href="#").header-link 
+                        i.fas.fa-inbox
+                        span Systemnachrichten
+                    a(href="#").header-link.active
+                        i.fas.fa-microchip
+                        span System
+                    a(href="#").header-link
+                        i.fas.fa-calendar-alt 
+                        span Kalender
+                    .user-info 
+                        span.username j.haas
+                        span 
+                            i.far.fa-user
+                .content
+                    .cards-wrapper(style="--delay: 1s")
+                        .cards-header
+                            .left  
+                                i.far.fa-clipboard
+                                span SysLog
+                                a(href="") Logs Aufräumen
+                            .middle
+                                span Anzahl der Elemente
+                                span 25
+                            .right 
+                                i.fas.fa-angle-right
+                                i.fas.fa-angle-double-right                       
+                        .cards.card
+                            table(cellspacing="0" cellpadding="0")
+                                thead
+                                    tr
+                                        th
+                                            span System-ID 
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span ID-Content
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Ext-Typ
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Vendor
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Controller
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Action
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Art
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span User ID
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Username
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Parameter
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen")
+                                        th
+                                            span Eintrag
+                                            span.sorting
+                                                a(href="#") 
+                                                    i.up.fas.fa-caret-up
+                                                a(href="#")
+                                                    i.down.fas.fa-caret-down
+                                            input(placeholder="Suchen") 
+                                tbody
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 1
+                                        td 69
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter.dif-1 Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 2
+                                        td 69
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td create
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 3
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td create
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 4
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 5
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter.dif Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 6
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter.dif Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 7
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 8
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 9
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter.dif Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 10
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50                                                                                                                    
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 11
+                                        td 69
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 12
+                                        td 69
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td create
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 13
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td create
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter.dif Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 14
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td r.braeuer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 15
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter.dif-2 Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 16
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter.dif-1 Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 17
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter.dif-1 Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 18
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 19
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+                                    tr
+                                        td 
+                                            input(type="checkbox")
+                                            span 20
+                                        td 18
+                                        td Sys 
+                                        td User
+                                        td Login 
+                                        td process 
+                                        td Controller 
+                                        td 1
+                                        td d.rempfer 
+                                        td 
+                                            span.parameter Parameter
+                                        td 
+                                            p 27.09.2019
+                                            p 17:20:50
+
+        script(src="https://kit.fontawesome.com/edcdc7b18e.js" crossorigin="anonymous")
+        script(src="./app.dev.js" async defer)
