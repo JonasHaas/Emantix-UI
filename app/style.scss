@@ -22,7 +22,7 @@ $green: #1aa385;
 $red: #d14b69;
 $purple: #3E4EC2;
 $highlight: #4255d4;
-$highlight-secondary: #9e5924;
+$highlight-secondary: $purple;
 
 $text-primary: #1d1d20;
 $text-secondary: #161616;
@@ -34,8 +34,8 @@ $background-modules-gradient:radial-gradient(circle, $background-modules-static 
 $background-header: #ffffff;
 $background-header-gradient: radial-gradient(circle,  $background-header 0%, $background-gradient-end 100%);
 $background-header-active: #f9f9f9;
-$background-cards-header: #525252;
-$background-cards: #ffffff;
+$background-cards-header: #10122b;
+$background-cards: #e5e5e5;
 $background-cards-gradient: radial-gradient(circle, $background-cards 0%, $background-gradient-end 100%);
 
 $ffi: 'FontAwesome';
@@ -157,6 +157,15 @@ html[data-theme='dark'] {
             th {
                 input {
                     border: 1px solid $text-primary;
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        .parameter {
+                            background-color: $highlight-secondary;
+                        }
+                    }
                 }
             }
         }
